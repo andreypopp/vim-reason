@@ -19,8 +19,6 @@ syn keyword   reasonOperator    as
 
 syn match     reasonAssert      "\<assert\(\w\)*!" contained
 syn match     reasonPanic       "\<panic\(\w\)*!" contained
-syn keyword   reasonKeyword     box nextgroup=reasonBoxPlacement skipwhite skipempty
-syn keyword   reasonKeyword     extern nextgroup=reasonExternCrate,reasonObsoleteExternMod skipwhite skipempty
 " syn keyword   reasonKeyword     fun nextgroup=reasonFuncName skipwhite skipempty
 syn keyword   reasonKeyword     unsafe where while fun mutable class pub pri val inherit let rec nonrec and module type exception open include constraint try
 
