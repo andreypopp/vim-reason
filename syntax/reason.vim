@@ -41,8 +41,12 @@ syn match    reasonConstructor  "\<\u\(\w\|'\)*\>"
 " Polymorphic variants
 syn match    reasonConstructor  "`\w\(\w\|'\)*\>"
 
-syn match    reasonModPath  "\<\u\w*\."
-
+syn match    reasonModPath  "\u\(\w\|'\)* *\."he=e-1
+syn match    reasonModPath  "\(\<open\s\+\)\@<=\u\(\w\|\.\)*"
+syn match    reasonModPath  "\(\<include\s\+\)\@<=\u\(\w\|\.\)*"
+syn match    reasonModPath  "\(\<module\s\+\)\@<=\u\(\w\|\.\)*"
+syn match    reasonModPath  "\(\<module\s\+\u\w*\s*=\s*\)\@<=\u\(\w\|\.\)*"
+ 
 
 syn region    reasonBoxPlacement matchgroup=reasonBoxPlacementParens start="(" end=")" contains=TOP contained
 " Ideally we'd have syntax rules set up to match arbitrary expressions. Since
