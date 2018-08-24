@@ -40,9 +40,9 @@ syn match     reasonFuncName    "\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)
 syn match labelArgument "\~\(\l\|_\)\(\w\|'\)*"lc=0   "Allows any space between label name and ::
 syn match labelArgumentPunned "\~\(\l\|_\)\(\w\|'\)*\(?\)\?"lc=0   "Allows any space between label name and ::
 
-syn match    reasonEnumVariant  "\<\u\(\w\|'\)*\>"
+syn match    reasonConstructor  "\<\u\(\w\|'\)*\>"
 " Polymorphic variants
-syn match    reasonEnumVariant  "`\w\(\w\|'\)*\>"
+syn match    reasonConstructor  "`\w\(\w\|'\)*\>"
 
 syn match    reasonModPath  "\<\u\w*\."
 
@@ -89,10 +89,6 @@ syn keyword reasonTrait AsRef AsMut Into From
 syn keyword reasonTrait Default
 syn keyword reasonTrait Iterator Extend IntoIterator
 syn keyword reasonTrait DoubleEndedIterator ExactSizeIterator
-syn keyword reasonEnum Option
-syn keyword reasonEnumVariant Some None
-syn keyword reasonEnum Result
-syn keyword reasonEnumVariant Ok Err
 syn keyword reasonTrait SliceConcatExt
 syn keyword reasonTrait String ToString
 syn keyword reasonTrait Vec
@@ -206,8 +202,7 @@ hi def link reasonCharacterInvalidUnicode reasonCharacterInvalid
 hi def link reasonCharacter     Character
 hi def link reasonNumber        Number
 hi def link reasonBoolean       Boolean
-hi def link reasonEnum          reasonType
-hi def link reasonEnumVariant   Function
+hi def link reasonConstructor   Constant
 hi def link reasonModPath       Include
 hi def link reasonConstant      Constant
 hi def link reasonSelf          Constant
