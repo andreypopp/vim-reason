@@ -22,10 +22,7 @@ syn match     reasonPanic       "\<panic\(\w\)*!" contained
 syn keyword   reasonKeyword     box nextgroup=reasonBoxPlacement skipwhite skipempty
 syn keyword   reasonKeyword     extern nextgroup=reasonExternCrate,reasonObsoleteExternMod skipwhite skipempty
 " syn keyword   reasonKeyword     fun nextgroup=reasonFuncName skipwhite skipempty
-syn keyword   reasonKeyword     unsafe where while
-syn keyword   reasonStorage     fun mutable class pub pri val inherit let rec nonrec and module type exception open include constraint
-" FIXME: Scoped impl's name is also fallen in this category
-" syn keyword   reasonStorageIdent   let and module type nextgroup=reasonIdentifier skipwhite skipempty
+syn keyword   reasonKeyword     unsafe where while fun mutable class pub pri val inherit let rec nonrec and module type exception open include constraint
 
 syn keyword   reasonExternCrate crate contained nextgroup=reasonIdentifier,reasonExternCrateString skipwhite skipempty
 " This is to get the `bar` part of `extern crate "foo" as bar;` highlighting.
@@ -227,8 +224,6 @@ hi def link reasonType          Type
 hi def link reasonTodo          Todo
 hi def link reasonAttribute     PreProc
 hi def link reasonDerive        PreProc
-hi def link reasonStorage       Conditional
-hi def link reasonStorageIdent StorageClass
 hi def link reasonObsoleteStorage Error
 hi def link reasonExternCrate   reasonKeyword
 hi def link reasonObsoleteExternMod Error
