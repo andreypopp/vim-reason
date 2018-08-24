@@ -22,7 +22,7 @@ syn match     reasonPanic       "\<panic\(\w\)*!" contained
 syn keyword   reasonKeyword     box nextgroup=reasonBoxPlacement skipwhite skipempty
 syn keyword   reasonKeyword     extern nextgroup=reasonExternCrate,reasonObsoleteExternMod skipwhite skipempty
 " syn keyword   reasonKeyword     fun nextgroup=reasonFuncName skipwhite skipempty
-syn keyword   reasonKeyword     unsafe where while fun mutable class pub pri val inherit let rec nonrec and module type exception open include constraint
+syn keyword   reasonKeyword     unsafe where while fun mutable class pub pri val inherit let rec nonrec and module type exception open include constraint try
 
 syn keyword   reasonExternCrate crate contained nextgroup=reasonIdentifier,reasonExternCrateString skipwhite skipempty
 " This is to get the `bar` part of `extern crate "foo" as bar;` highlighting.
