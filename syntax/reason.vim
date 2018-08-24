@@ -208,7 +208,7 @@ hi def link reasonNumber        Number
 hi def link reasonBoolean       Boolean
 hi def link reasonEnum          reasonType
 hi def link reasonEnumVariant   Function
-hi def link reasonModPath       Macro
+hi def link reasonModPath       Include
 hi def link reasonConstant      Constant
 hi def link reasonSelf          Constant
 hi def link reasonFloat         Float
