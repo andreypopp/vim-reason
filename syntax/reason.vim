@@ -17,8 +17,8 @@ endif
 syn keyword   reasonConditional switch match if else for in
 syn keyword   reasonOperator    as
 
-syn match     reasonAssert      "\<assert\(\w\)*!" contained
-syn match     reasonPanic       "\<panic\(\w\)*!" contained
+syn match     reasonAssert      "\<assert\(\w\)*"
+syn match     reasonFailwith    "\<failwith\(\w\)*"
 " syn keyword   reasonKeyword     fun nextgroup=reasonFuncName skipwhite skipempty
 syn keyword   reasonKeyword     unsafe where while fun mutable class pub pri val inherit let rec nonrec and module type exception open include constraint try external
 
@@ -214,7 +214,7 @@ hi def link reasonCommentLineDoc Comment
 hi def link reasonCommentBlock  reasonCommentLine
 hi def link reasonCommentBlockDoc reasonCommentLineDoc
 hi def link reasonAssert        PreCondit
-hi def link reasonPanic         PreCondit
+hi def link reasonFailwith      PreCondit
 hi def link reasonType          Type
 hi def link reasonTodo          Todo
 hi def link reasonAttribute     PreProc
