@@ -59,9 +59,6 @@ syn region reasonMacroRepeat matchgroup=reasonMacroRepeatDelimiters start="$(" e
 syn match reasonMacroRepeatCount ".\?[*+]" contained
 syn match reasonMacroVariable "$\w\+"
 
-" Reserved (but not yet used) keywords {{{2
-syn keyword   reasonReservedKeyword alignof become do offsetof priv pure sizeof typeof unsized yield abstract virtual final override macro
-
 " Built-in types {{{2
 syn keyword   reasonType        int float option list array unit ref bool string
 
@@ -209,7 +206,6 @@ hi def link reasonFloat         Float
 hi def link reasonArrowCharacter reasonOperator
 hi def link reasonOperator      Keyword
 hi def link reasonKeyword       Keyword
-hi def link reasonReservedKeyword Error
 hi def link reasonConditional   StorageClass
 hi def link reasonIdentifier    Identifier
 hi def link reasonCapsIdent     reasonIdentifier
