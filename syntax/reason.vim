@@ -22,9 +22,6 @@ syn match     reasonPanic       "\<panic\(\w\)*!" contained
 " syn keyword   reasonKeyword     fun nextgroup=reasonFuncName skipwhite skipempty
 syn keyword   reasonKeyword     unsafe where while fun mutable class pub pri val inherit let rec nonrec and module type exception open include constraint try external
 
-syn keyword   reasonExternCrate crate contained nextgroup=reasonIdentifier,reasonExternCrateString skipwhite skipempty
-" This is to get the `bar` part of `extern crate "foo" as bar;` highlighting.
-syn match   reasonExternCrateString /".*"\_s*as/ contained nextgroup=reasonIdentifier skipwhite transparent skipempty contains=reasonString,reasonOperator
 syn keyword   reasonObsoleteExternMod mod contained nextgroup=reasonIdentifier skipwhite skipempty
 
 syn match     reasonIdentifier  contains=reasonIdentifierPrime "\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*" display contained
@@ -223,7 +220,6 @@ hi def link reasonTodo          Todo
 hi def link reasonAttribute     PreProc
 hi def link reasonDerive        PreProc
 hi def link reasonObsoleteStorage Error
-hi def link reasonExternCrate   reasonKeyword
 hi def link reasonObsoleteExternMod Error
 hi def link reasonBoxPlacementParens Delimiter
 
